@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+html{
+    background-color: #121212;
+    height: 100vh;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    scroll-behavior: smooth;
+}
+
+#forma {
+    border: 5px solid #121212;
+    background-color: #121212;
+    margin-left: 10%;
+    margin-top: 140px;
+    padding: 20px 10px 0px 40px;
+    width: 80%;
+    height: 760px;
+    border-radius: 5px;
+    border-bottom: none;
+    box-shadow: 0px 0px 14px 0px #000000;
+}
+
+h1{
+    color: lightgray;
+    margin: 40px;
+    text-align: center;
+    font-size: 32px;
+}
+
+
+p{
+    text-align: left;
+    text-indent: 20px;
+    color: lightgray;
+    font: 18px sans-serif;
+    float: center;
+}
+
+input {
+    transition: .7s ease;
+    color: #868283;
+}
+
+
+#Data{
+    color:lightgrey;
+}
+
+/*Serve para quando um botao for selecionado nao fique o contorno*/
+input:focus, button:focus {
+    outline: 0;
+  }
+
+
+/*Tamanho da barra de navegacao*/
+::-webkit-scrollbar {
+    width: 2px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/*Cor da scrollbar*/
+::-webkit-scrollbar-thumb {
+    background: #D09B52;
+}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+    background-color: #555;
+    color: white;
+    height: 60px;
+    border: 2px solid rgb(208, 156, 82);
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 0.7em;
+    letter-spacing: 1.8pt;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    top: 23px;
+    right: 28px;
+    width: 180px;
+    border-radius: 30px;
+  }
+  
+  /* The popup form - hidden by default */
+  .form-popup {
+    display: none;
+    position: fixed;
+    top: 180px;
+    right: 750px;
+    border-radius: 25px;
+    /*z-index, usado para "empilhar"*/
+    z-index: 1;
+  }
+  
+  /* Add styles to the form container */
+  .form-login {
+    max-width: 400px;
+    padding: 10px;
+    background-color: rgba(85, 85, 85, 0.99);
+    border-radius: 20px;
+  }
+  
+  /* Full-width input fields */
+  .form-login input[type=text], .form-login input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    border-radius: 15px;
+    background: #f1f1f1;
+  }
+  
+  /* When the inputs get focus, do something */
+  .form-login input[type=text]:focus, .form-login input[type=password]:focus {
+    background-color: rgb(206, 206, 206);
+    outline: none;
+  }
+  
+  /* Set a style for the submit/login button */
+  .form-login .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+    border-radius: 15px;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-login .cancel {
+    background-color: red;
+    border-radius: 15px;
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-login .btn:hover, .open-button:hover {
+    opacity: 1;
+  }

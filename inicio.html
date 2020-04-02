@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="inicio.css"> <!--Juncao com a pagina css-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To-Do</title>
+</head>
+<body>
+    <div>
+        <button class="open-button" onclick="openForm()">Login/Registo</button>
+
+        <div class="form-popup" id="loginForm">
+          <form id action="/action_page.php" class="form-login">
+            <h1>Login</h1>
+        
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Introduza Email" name="email" required>
+        
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Introduza a password" name="psw" required>
+        
+            <button type="submit" class="btn">Login</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+          </form>
+        </div>
+
+        <div class="form-popup" id="loginForm">
+            <form id action="/action_page.php" class="form-registo">
+              <h1>Registo</h1>
+          
+              <label for="email"><b>Email</b></label>
+              <input type="text" placeholder="Introduza Email" name="email" required>
+          
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Introduza a password" name="psw" required>
+          
+              <button type="submit" class="btn">Login</button>
+            </form>
+          </div>
+
+        <form id="forma"><!--Cria a forma-->
+            <date id="Data"></date><!--Serve para aparecer a data atual-->
+            <h1>Lista To-Do</h1>
+            <p>Aqui pode criar as suas tarefas e personaliza-las.</p>
+        </form>
+    </div>
+    <script src="inicio.js">
+      var date = new Date();
+      document.getElementById("Data").innerHTML= date.toDateString(); //Obtemos a data em que estamos
+  
+    </script>
+  </body>
+  </html>

@@ -1,1 +1,1 @@
-# Trabalho_Pr-tico_6
+# Trabalho_Prtico_6

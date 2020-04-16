@@ -41,10 +41,31 @@
           </div>
 
         <form id="forma"><!--Cria a forma-->
-            <date id="Data"></date><!--Serve para aparecer a data atual-->
-            <h1>Lista To-Do</h1>
-            <p>Aqui pode criar as suas tarefas e personaliza-las.</p>
+
+          <h1>Lista To-Do</h1>
+          <p>Aqui pode criar as suas tarefas e personaliza-las.</p>
+
+          <div>
+            <button class="addTarefa" onclick="abrirForm()">Adicionar Tarefa</button>
+    
+            <div class="form-tarefa" id="tarefaForm">
+              <form id action="/action_page.php" class="form-tarefa"></form>
+                <h1>Tarefa</h1>
+            
+                <input type="text" placeholder="Adicione aqui a sua tarefa" name="tarefa" required>
+            
+                <button type="submit" class="btn">Criar</button>
+                <button type="button" class="btn cancel" onclick="fecharForm()">Cancelar</button>
+              </form>
+            </div>
+
+            <form id="lista_tarefas">
+              <h5>Aqui pode ver as tarefas criadas</h5>
+              
+            </form>
+
         </form>
+        
     </div>
     <script src="inicio.js">
       var date = new Date();

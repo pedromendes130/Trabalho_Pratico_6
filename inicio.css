@@ -7,7 +7,7 @@
 }
 
 html{
-    background-color: #121212;
+    background-color: #1f1f1f;
     height: 100vh;
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -16,8 +16,8 @@ html{
 }
 
 #forma {
-    border: 5px solid #121212;
-    background-color: #121212;
+    border: 5px solid #1f1f1f;
+    background-color: #1f1f1f;
     margin-left: 10%;
     margin-top: 140px;
     padding: 20px 10px 0px 40px;
@@ -25,11 +25,11 @@ html{
     height: 760px;
     border-radius: 5px;
     border-bottom: none;
-    box-shadow: 0px 0px 14px 0px #000000;
+    box-shadow: 0px 0px 20px 0px #000000;
 }
 
 h1{
-    color: lightgray;
+    color: #03dac6;
     margin: 40px;
     text-align: center;
     font-size: 32px;
@@ -39,7 +39,7 @@ h1{
 p{
     text-align: left;
     text-indent: 20px;
-    color: lightgray;
+    color: #018786;
     font: 18px sans-serif;
     float: center;
 }
@@ -76,7 +76,7 @@ input:focus, button:focus {
     background-color: #555;
     color: white;
     height: 60px;
-    border: 2px solid rgb(208, 156, 82);
+    border: 2px solid #03dac6;
     text-transform: uppercase;
     font-weight: 800;
     font-size: 0.7em;
@@ -94,8 +94,8 @@ input:focus, button:focus {
   .form-popup {
     display: none;
     position: fixed;
-    top: 180px;
-    right: 750px;
+    top: 100px;
+    right: 30px;
     border-radius: 25px;
     /*z-index, usado para "empilhar"*/
     z-index: 1;
@@ -103,15 +103,15 @@ input:focus, button:focus {
   
   /* Add styles to the form container */
   .form-login {
-    max-width: 400px;
+    max-width: 300px;
     padding: 10px;
     background-color: rgba(85, 85, 85, 0.99);
     border-radius: 20px;
   }
   
   /* Full-width input fields */
-  .form-login input[type=text], .form-login input[type=password] {
-    width: 100%;
+  .form-login input[type=text], .form-login input[type=password]{
+    width: 90%;
     padding: 15px;
     margin: 5px 0 22px 0;
     border: none;
@@ -121,6 +121,7 @@ input:focus, button:focus {
   
   /* When the inputs get focus, do something */
   .form-login input[type=text]:focus, .form-login input[type=password]:focus {
+    width: 100%;
     background-color: rgb(206, 206, 206);
     outline: none;
   }
@@ -148,3 +149,85 @@ input:focus, button:focus {
   .form-login .btn:hover, .open-button:hover {
     opacity: 1;
   }
+
+ #adicionar{
+   margin-top: 50px;
+   margin-left: 20px;
+ }
+
+ h2{
+   margin-top: -25px;
+   margin-left: 80px;
+   color: #018786;
+ }
+
+ .addTarefa{
+  background-color: #555;
+  color: white;
+  height: 40px;
+  width: 130px;
+  border: 2px solid #03dac6;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 0.6em;
+  letter-spacing: 1.8pt;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  border-radius: 30px;
+  margin-top: 50px;
+  margin-left: 30%;
+ }
+
+ #tarefaForm {
+  display: none;
+  position: fixed;
+  margin-top: 50px;
+  border-radius: 25px;
+  /*z-index, usado para "empilhar"*/
+  z-index: 1;
+}
+
+.form-tarefa {
+  max-width: 300px;
+  padding: 10px;
+  margin-left: 200px;
+  background-color: rgba(85, 85, 85, 0.99);
+}
+
+.form-tarefa input[type=text]{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  border-radius: 10px;
+  background: #f1f1f1;
+}
+
+.form-tarefa .btn {
+  background-color: rgb(128, 128, 128);
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  border-radius: 15px;
+}
+
+.form-tarefa .btn:hover{
+  background-color: rgb(179, 179, 179);
+}
+
+#lista_tarefas{
+  width: 90%;
+  height: 500px;
+  margin-left: 5%;
+  background-color: rgba(135, 206, 250, 0);
+}
+
+h5{
+  padding-top: 120px;
+  padding-left: 35px;
+}

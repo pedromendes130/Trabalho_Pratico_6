@@ -22,67 +22,37 @@ html{
     margin-top: 140px;
     padding: 20px 10px 0px 40px;
     width: 80%;
-    height: 760px;
+    min-height: 760px;
     border-radius: 5px;
     border-bottom: none;
     box-shadow: 0px 0px 20px 0px #000000;
 }
 
 h1{
-    color: #03dac6;
+    color: #bb86fc;
     margin: 40px;
     text-align: center;
     font-size: 32px;
 }
 
 
-p{
-    text-align: left;
-    text-indent: 20px;
-    color: #018786;
-    font: 18px sans-serif;
-    float: center;
-}
-
-input {
-    transition: .7s ease;
-    color: #868283;
-}
-
-
-#Data{
-    color:lightgrey;
-}
-
-/*Serve para quando um botao for selecionado nao fique o contorno*/
+/* Serve para quando um botao for selecionado nao fique o contorno */
 input:focus, button:focus {
     outline: 0;
   }
 
 
-/*Tamanho da barra de navegacao*/
-::-webkit-scrollbar {
-    width: 2px;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-/*Cor da scrollbar*/
-::-webkit-scrollbar-thumb {
-    background: #D09B52;
-}
-
-/* Button used to open the contact form - fixed at the bottom of the page */
+/* Botão usado para abrir a forma do login */
 .open-button {
     background-color: #555;
     color: white;
     height: 60px;
-    border: 2px solid #03dac6;
+    border: 2px solid #bb86fc;
     text-transform: uppercase;
     font-weight: 800;
     font-size: 0.7em;
     letter-spacing: 1.8pt;
     cursor: pointer;
-    opacity: 0.8;
     position: fixed;
     top: 23px;
     right: 28px;
@@ -90,7 +60,7 @@ input:focus, button:focus {
     border-radius: 30px;
   }
   
-  /* The popup form - hidden by default */
+  /* Popup de login, oculto por defeito */
   .form-popup {
     display: none;
     position: fixed;
@@ -101,34 +71,37 @@ input:focus, button:focus {
     z-index: 1;
   }
   
-  /* Add styles to the form container */
+  /* Forma do login */
   .form-login {
     max-width: 300px;
     padding: 10px;
     background-color: rgba(85, 85, 85, 0.99);
-    border-radius: 20px;
+    border-radius: 10px;
   }
   
-  /* Full-width input fields */
+  /* Input do login */
   .form-login input[type=text], .form-login input[type=password]{
     width: 90%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    border: none;
-    border-radius: 15px;
-    background: #f1f1f1;
+    margin: 0 0 25px 10px;
+    border-bottom: 2px solid #bb86fc;
   }
   
-  /* When the inputs get focus, do something */
   .form-login input[type=text]:focus, .form-login input[type=password]:focus {
-    width: 100%;
-    background-color: rgb(206, 206, 206);
-    outline: none;
+    transition: 1.2s;
+    width: 90%;
+    background-color: rgba(206, 206, 206, 0);
+    border-bottom: 2px solid #933bff;
   }
-  
-  /* Set a style for the submit/login button */
+
+  .form-login input[type=text]:placeholder-shown, .form-login input[type=password]:placeholder-shown{
+    width: 80%;
+  }
+
+
+
+  /* Botão Login dentro da forma */
   .form-login .btn {
-    background-color: #4CAF50;
+    background-color: rgba(0, 255, 0, 0.5);
     color: white;
     padding: 16px 20px;
     border: none;
@@ -139,10 +112,14 @@ input:focus, button:focus {
     border-radius: 15px;
   }
   
-  /* Add a red background color to the cancel button */
+  /* Botão cancelar dentro da forma */
   .form-login .cancel {
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.5);
     border-radius: 15px;
+  }
+
+  .form-login .btn, .form-login .cancel{
+    width: calc(50% - 3px);
   }
   
   /* Add some hover effects to buttons */
@@ -155,79 +132,104 @@ input:focus, button:focus {
    margin-left: 20px;
  }
 
- h2{
-   margin-top: -25px;
-   margin-left: 80px;
-   color: #018786;
- }
 
- .addTarefa{
-  background-color: #555;
-  color: white;
-  height: 40px;
-  width: 130px;
-  border: 2px solid #03dac6;
-  text-transform: uppercase;
-  font-weight: 800;
-  font-size: 0.6em;
-  letter-spacing: 1.8pt;
+/*Adicionar Tarefa*/
+
+/* Lista das tarefas adicionadas */
+ul li {
   cursor: pointer;
-  opacity: 0.8;
-  position: fixed;
-  border-radius: 30px;
-  margin-top: 50px;
-  margin-left: 30%;
- }
-
- #tarefaForm {
-  display: none;
-  position: fixed;
-  margin-top: 50px;
-  border-radius: 25px;
-  /*z-index, usado para "empilhar"*/
-  z-index: 1;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: rgba(0, 0, 0, 0.050);
+  font-size: 18px;
+  transition: 0.2s;
+  color: rgba(255, 255, 255, 0.85);
+  width: 70%;
+  margin-left: 15%;
 }
 
-.form-tarefa {
-  max-width: 300px;
+/* Número das listas ímpares */
+ul li:nth-child(odd) {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+ul li.checked {
+  background: rgba(255, 255, 255, 0.1);
+  color: #bb86fc;
+}
+
+ul li:hover {
+  background: rgba(0, 0, 0, 0.30);
+}
+
+/* Visto */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Botão de eliminar tarefa */
+.close {
+  color: rgba(255, 0, 38, 0.4);
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+  color: rgb(255, 0, 0);
+}
+
+
+/* "Limpa" a parte de baixo do input da tarefa */
+.header:after {
+  content: "";
+  padding-bottom: 50px;
+  display: table;
+  clear: both;
+}
+
+/* Input da tarefa */
+input {
+  background-color: #0000;
+  color: rgba(255, 255, 255, 0.85);
+  border: none;
+  border-bottom: 2px solid #bb86fc;
+  width: 60%;
+  margin-left: 15%;
   padding: 10px;
-  margin-left: 200px;
-  background-color: rgba(85, 85, 85, 0.99);
+  float: left;
+  font-size: 16px;
 }
 
-.form-tarefa input[type=text]{
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  border-radius: 10px;
-  background: #f1f1f1;
-}
-
-.form-tarefa .btn {
-  background-color: rgb(128, 128, 128);
-  color: white;
-  padding: 16px 20px;
-  border: none;
+/* Botão adicionar */
+.addBtn {
+  padding: 10px;
+  width: 10%;
+  background: #00000000;
+  color: rgba(255, 255, 255, 0.85);
+  border-bottom: 2px solid #bb86fc;
+  float: left;
+  text-align: center;
+  font-size: 16px;
   cursor: pointer;
-  width: 100%;
-  margin-bottom:10px;
-  opacity: 0.8;
-  border-radius: 15px;
+  transition: 0.3s;
+  border-radius: 0;
 }
 
-.form-tarefa .btn:hover{
-  background-color: rgb(179, 179, 179);
-}
-
-#lista_tarefas{
-  width: 90%;
-  height: 500px;
-  margin-left: 5%;
-  background-color: rgba(135, 206, 250, 0);
-}
-
-h5{
-  padding-top: 120px;
-  padding-left: 35px;
+.addBtn:hover {
+  transition: 0.7s;
+  border-bottom-color: #bb86fc33;
+  color: #bb86fc;
+  border-bottom: 2px dashed #bb86fc;
 }

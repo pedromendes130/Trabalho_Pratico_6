@@ -15,14 +15,12 @@
           <form id action="/action_page.php" class="form-login">
             <h1>Login</h1>
         
-            <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Introduza Email" name="email" required>
-        
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Introduza a password" name="psw" required>
-        
+
+            <input type="text" placeholder="E-mail" name="email" required>
+            <input type="password" placeholder="Password" name="psw" required>
+         
+            <button type="button" class="btn cancel" onclick="closeForm()">Cancelar</button>
             <button type="submit" class="btn">Login</button>
-            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
           </form>
         </div>
 
@@ -43,26 +41,16 @@
         <form id="forma"><!--Cria a forma-->
 
           <h1>Lista To-Do</h1>
-          <p>Aqui pode criar as suas tarefas e personaliza-las.</p>
 
-          <div>
-            <button class="addTarefa" onclick="abrirForm()">Adicionar Tarefa</button>
-    
-            <div class="form-tarefa" id="tarefaForm">
-              <form id action="/action_page.php" class="form-tarefa"></form>
-                <h1>Tarefa</h1>
-            
-                <input type="text" placeholder="Adicione aqui a sua tarefa" name="tarefa" required>
-            
-                <button type="submit" class="btn">Criar</button>
-                <button type="button" class="btn cancel" onclick="fecharForm()">Cancelar</button>
-              </form>
-            </div>
+          <div id="myDIV" class="header">
 
-            <form id="lista_tarefas">
-              <h5>Aqui pode ver as tarefas criadas</h5>
-              
-            </form>
+            <input type="text" id="myInput" placeholder="Adicione aqui a sua tarefa...">
+            <span onclick="newElement()" class="addBtn">Adicionar</span>
+
+          </div>
+
+          <ul id="myUL"><!--Onde as tarefas serão guardadas-->
+          </ul>
 
         </form>
         

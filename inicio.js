@@ -6,6 +6,21 @@ function closeForm() {
   document.getElementById("loginForm").style.display = "none";
 }
 
+
+//Funcao pora alterar light/dark
+//function changeCSS(light, cssLinkIndex) {
+
+ // var dark = document.getElementsByTagName("link").item(cssLinkIndex);
+
+  //var light = document.createElement("link");
+  //light.setAttribute("rel", "stylesheet");
+  //light.setAttribute("type", "text/css");
+  //light.setAttribute("href", "light");
+
+  //document.getElementsByTagName("head").item(0).replaceChild(light, dark);
+//}
+
+
 // Cria um botão "fechar" e anexa-o a cada item da lista
 var myNodelist = document.getElementsByTagName("LI");
 var i;

@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="inicio.css"> <!--Juncao com a pagina css-->
+    <link rel="stylesheet" type="text/css" href="dark.css"> <!--Juncao com a pagina css-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>To-Do</title>
 </head>
 <body>
-    <div>
-        <button class="open-button" onclick="openForm()">Login/Registo</button>
+    <div class="topnav">
+      <div>
+        <!--Terminar botao para alterar dark/light-->
+        <label class="switch">
+          <input type="checkbox">
+          <!--<input type="checkbox" onclick="changeCSS('positive.css', 0);">
+          <input type="checkbox" onclick="changeCSS('negative.css', 0);">-->
+          <span class="slider round"></span>
+        </label>
+          <button class="open-button" onclick="openForm()">Login/Registo</button>
+      </div>
 
-        <div class="form-popup" id="loginForm">
+        <div class="form-popup" id="loginForm" >
           <form id action="/action_page.php" class="form-login" autocomplete="off">
             <h1>Login</h1>
         
@@ -21,24 +30,13 @@
          
             <button type="button" class="btn cancel" onclick="closeForm()">Cancelar</button>
             <button type="submit" class="btn">Login</button>
+            <h2>Ainda não tem conta?<a href="registo.html"> Registar</a></h2>
           </form>
         </div>
 
-        <div class="form-popup" id="loginForm">
-            <form id action="/action_page.php" class="form-registo" autocomplete="off">
-              <h1>Registo</h1>
-          
-              <label for="email"><b>Email</b></label>
-              <input type="text" placeholder="Introduza Email" name="email" required>
-          
-              <label for="psw"><b>Password</b></label>
-              <input type="password" placeholder="Introduza a password" name="psw" required>
-          
-              <button type="submit" class="btn">Login</button>
-            </form>
-          </div>
 
         <form id="forma" autocomplete="off"><!--Cria a forma-->
+          
 
           <h1>Lista To-Do</h1>
 
@@ -58,7 +56,7 @@
     <script src="inicio.js">
       var date = new Date();
       document.getElementById("Data").innerHTML= date.toDateString(); //Obtemos a data em que estamos
-  
+
     </script>
   </body>
   </html>

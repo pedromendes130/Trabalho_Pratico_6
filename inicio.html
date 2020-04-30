@@ -17,21 +17,20 @@
           <input type="checkbox" onclick="changeCSS('negative.css', 0);">-->
           <span class="slider round"></span>
         </label>
-          <button class="open-button" onclick="openForm()">Login</button>
-          <button class="open-button" onclick="openForm()">Registo</button>
+          <button class="open-button" onclick="openForm()">Login/Registo</button>
       </div>
 
         <div class="form-popup" id="loginForm" >
           <form id action="/action_page.php" class="form-login" autocomplete="off">
-
             <h1>Login</h1>
+        
+
             <input type="text" placeholder="E-mail" name="email" required>
             <input type="password" placeholder="Password" name="psw" required>
-
-            
+         
             <button type="button" class="btn cancel" onclick="closeForm()">Cancelar</button>
             <button type="submit" class="btn">Login</button>
-            
+            <h2>Ainda não tem conta?<a href="registo.html"> Registar</a></h2>
           </form>
         </div>
 

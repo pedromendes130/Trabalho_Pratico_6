@@ -13,16 +13,18 @@ function Validar() {
     var expresion = /\w+@\w+\.+[a-z]{2,3}/; 
     //Expressao regular de um email, nome@dominio.url.
 
-    if(nome == "" || apelido == "" || cidade == ""){
+    if(nome == "" || apelido == ""){
         //Verificacao se os campos estao vazios
         alert("Complete todos os espaços.");
+    } else if(email==""){
+        alert("Introduza o seu email.")
     } else if(!expresion.test(email)){
         //verifica a expressao do email
          alert("Endereço de email errado.");
     } else if(password != password_2){
-         alert("As senhas não coincidem.");
+         alert("As passwords não coincidem.");
     } else{
-        obj.registo.push({nome, apelido, cidade, num, email, password});
+        obj.registo.push({nome, apelido, email, password});
         alert("Obrigado por se registar, agora pode fazer login."); 
         location.href = "inicio.html";
     }

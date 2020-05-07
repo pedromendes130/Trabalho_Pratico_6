@@ -38,11 +38,16 @@ h2{
   color: white;
   font-size: 18px;
 }
+
 a{
   color: #bb86fc;
   text-decoration: none;
 }
 
+a:hover{
+  color: #a860ff;
+  text-decoration: underline;
+}
 .topnav{
   height: 70px;
   width: 100%;

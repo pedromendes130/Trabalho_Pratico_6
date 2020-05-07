@@ -44,15 +44,15 @@
 
   input[type=text], input[type=password] {
     color: rgb(255, 255, 255);
-    background-color:#313131 ;
+    background-color:#313131;
     width: calc(100% - 30px);
     margin-bottom: 30px;
     border: 2px solid #bb86fc;
+    transition: 1.7s;
   }
-
   
   input[type=text]:placeholder-shown, input[type=password]:placeholder-shown {
-    border: 2px solid #313131 ;
+    border: 2px solid #313131;
   }
 
   input[type=text]::placeholder, input[type=password]::placeholder {
@@ -66,9 +66,10 @@
     float: left;
     margin-right: 30px;
   }
+  
   input[type=button] {
     background: #3b3b3b;
-    border: 2px solid #bb86fc;
+    border: 2px solid #303030;
     width: calc(20% - 30px);
     height: 40px;
     margin: 0 30px -20px 0;
@@ -79,6 +80,7 @@
     text-transform: uppercase;
     cursor: pointer;
   }
+  
   #btn_aceitar{
     color: rgb(122, 208, 82);
   }
@@ -97,3 +99,7 @@
   input:focus {
     outline: 0;
   }
+
+ input[type=button]:hover{
+   border-color: #747474;
+ }
